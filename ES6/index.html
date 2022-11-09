@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Define & declare class in ES5
+        /*
+            function Person() {
+                console.log("ES5 class def");
+            }
+            var p = new Person();
+
+        //Function in ES5
+            function hello() {
+                console.log("hereis function with ES5");
+            }
+            hello();
+            */
+
+        //Define & declare class in ES6
+        class Person {
+            //Need to declare private fields
+            #test;
+
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+                this.#test = 10;
+                console.log("Person obj init ES6");
+                console.log("name: ", this.name);
+                console.log("Age: ", this.age);
+            }
+
+           #stuffPrivate() {
+                console.log("Calling the private member here --> ");
+                return this.#test;
+            }
+
+            getConcat() {
+                console.log("Public method here");
+                return this.conCat();
+            }
+
+            conCat() {
+                return (
+                    "Nameof session " + this.name + " with duration " + this.age
+                );
+            }
+
+            //Privilege implementation
+            preMethod() {
+                console.log("This is privilege implementation");
+                return this.#test;
+                //return this.#stuffPrivate();
+            }
+
+            static myStatic() {
+                return "This is static string";
+                //return this.age; --> Cant access non-static properties
+            }
+
+            testOverride() {
+                console.log("Parent testOverride");
+                return "hi";
+            }
+        }
+
+        Person.prototype.newVar = 100;
+        Person.prototype.newFunc = function() {
+            console.log("add extension, calling prototype func");
+            return this.newVar;
+        }
+
+        Person.prototype.preMethod = function() {
+            return 999;
+        }
+
+        //Inheritence
+        class Student extends Person {
+
+            someStudentMethod() {
+                return "string from Student class";
+            }
+
+            testOverride() {
+                console.log(super.testOverride());
+                //console.log("child testOverride");
+                return "Overriden by child";
+            }
+        }
+
+        /*
+        //Parent class - Person access logs:
+        console.log("----Parent class - Person access logs------");
+        let p = new Person('Angular training', 10);
+        console.log(typeof(p.age));
+        console.log("Access public property --> ", p.name);
+        console.log("Calling public method definition --> ", p.getConcat);
+        console.log("Calling public method --> ", p.getConcat());
+        console.log(p.conCat());
+
+        console.log("----------");
+        console.log("Private: ", p.stuffPrivate);
+        console.log("----------");
+        console.log("Privileged impl called --> ", p.preMethod());
+        console.log("----------");
+        console.log("Calling prototype func --> ", p.newFunc());
+        console.log("----------");
+        console.log("Static method invocation --> ", Person.myStatic()); //Access only via class name
+        */
+        //Child class - Student access logs:
+        console.log("----Child class - Student access logs------");
+        let s = new Student('Angular training', 10);
+        console.log(typeof(s.age));
+        console.log("Access public property --> ", s.name);
+        console.log("Calling public method definition --> ", s.getConcat);
+        console.log("Calling public method --> ", s.getConcat());
+        console.log(s.conCat());
+
+        console.log("----------");
+        console.log("Private: ", s.stuffPrivate); //Cantaccess this since it is private
+        console.log("----------");
+        console.log("Privileged impl called --> ", s.preMethod());
+        console.log("----------");
+        console.log("Calling prototype func --> ", s.newFunc());
+        console.log("----------");
+        console.log("Static method invocation --> ", Person.myStatic()); //Access only via class name
+       
+        console.log("Overriding ---> ", s.testOverride());
+
+
+        //Function in ES6
+        function hello() {
+                console.log("obj is init -- inside function");
+        }
+        hello();
+    </script>
+</body>
+</html>
