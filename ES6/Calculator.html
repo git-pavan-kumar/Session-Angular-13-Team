@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Calculator {
+            result;
+            process() {}
+            print() {}
+        }
+
+        class BasicCalculator extends Calculator {
+            #op1;
+            #op2;
+            constructor(op1, op2) {
+                super();
+                this.op1 = op1;
+                this.op2 = op2;
+            }
+            static ADD_OPERATION = "Add";
+            static SUB_OPERATION = "Subtract";
+            static MULTIPLY_OPERATION = "Multiply";
+            static DIVIDE_OPERATION = "Divide";
+
+            add = ()=> {
+                 this.result = this.op1 + this.op2;
+            }
+            subtract = ()=>{
+                this.result = this.op1 - this.op2;
+            }
+            multiply = ()=>{
+                this.result = this.op1 * this.op2;
+            }
+            divide = ()=>{
+                this.result = this.op1 / this.op2;
+            }
+        }
+
+        class ScientificCalculator extends Calculator {
+            constructor(op1, op2) {
+                super();
+                this.op1 = op1;
+                this.op2 = op2;
+            }
+            static SQRT_OPERATION = "Square root";
+            static SIN_OPERATION = "Sin";
+            static COS_OPERATION = "Cos";
+            static TAN_OPERATION = "Tan";
+
+            sqrt = ()=>{
+                this.result = Math.sqrt(this.op1);
+             }
+            sin = ()=>{
+                this.result = Math.sin(this.op1);
+            }
+            cos = ()=>{
+                this.result = Math.cos(this.op1);
+            }
+            tan = ()=>{
+                this.result = Math.atan(this.op1 * Math.PI / 180);
+            }
+        }
+
+        BasicCalculator.prototype.process = function(operation) {
+            if(operation === BasicCalculator.ADD_OPERATION) {
+                this.add();
+                this.print(BasicCalculator.ADD_OPERATION);
+            } else if(operation === BasicCalculator.SUB_OPERATION) {
+                this.subtract();
+                this.print(BasicCalculator.SUB_OPERATION);
+            } else if(operation === BasicCalculator.MULTIPLY_OPERATION) {
+                this.multiply();
+                this.print(BasicCalculator.MULTIPLY_OPERATION);
+            } else if(operation === BasicCalculator.DIVIDE_OPERATION) {
+                this.divide();
+                this.print(BasicCalculator.DIVIDE_OPERATION);
+            }
+        }
+        BasicCalculator.prototype.print = function(operation) {
+            console.log("Result of the " + operation + " operation --> ", this.result);
+        }
+
+        console.log("----------Basic calc operations ------------");
+        //BasicCalculator
+        let calc = new BasicCalculator(6,3);
+        //Addition
+        calc.process(BasicCalculator.ADD_OPERATION);
+        //Subtraction  
+        calc.process(BasicCalculator.SUB_OPERATION);
+        //Multiply
+        calc.process(BasicCalculator.MULTIPLY_OPERATION);
+        //Division
+        calc.process(BasicCalculator.DIVIDE_OPERATION);
+
+        ScientificCalculator.prototype.process = function(operation) {
+            if(operation === ScientificCalculator.SQRT_OPERATION) {
+                this.sqrt();
+                this.print(ScientificCalculator.SQRT_OPERATION);
+            } else if(operation === ScientificCalculator.SIN_OPERATION) {
+                this.sin();
+                this.print(ScientificCalculator.SIN_OPERATION);
+            } else if(operation === ScientificCalculator.COS_OPERATION) {
+                this.cos();
+                this.print(ScientificCalculator.COS_OPERATION);
+            } else if(operation === ScientificCalculator.TAN_OPERATION) {
+                this.tan();
+                this.print(ScientificCalculator.TAN_OPERATION);
+            }
+        }
+        ScientificCalculator.prototype.print = function(operation) {
+            console.log("Result of the " + operation + " operation --> ", this.result);
+        }
+
+        console.log("\n----------Scientific calc operations ------------");
+         //ScientificCalculator
+         let scienCalc = new ScientificCalculator(9);
+        //sqrt
+        scienCalc.process(ScientificCalculator.SQRT_OPERATION);
+       // scienCalc.sqrt();
+       // scienCalc.print(ScientificCalculator.SQRT_OPERATION);
+        //sin
+        scienCalc.sin();
+        scienCalc.print(ScientificCalculator.SIN_OPERATION);
+        //cos
+        scienCalc.cos();
+        scienCalc.print(ScientificCalculator.COS_OPERATION);
+        //tan
+        scienCalc.tan();
+        scienCalc.print(ScientificCalculator.TAN_OPERATION);
+    </script>
+</body>
+</html>

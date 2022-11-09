@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        //let vs var
+        //2 scopes: local, global     
+        var z; //global var
+        function testLet(x) {
+            var y; //local var
+            if(x === 1) {
+                var d = 10;
+                y = 2;
+                z = 5;
+                console.log("print the d --> ", d);
+                console.log("print the y --> ", y);
+            }
+            console.log("print the d --> ", d);
+            console.log("print the y --> ", y);
+        }
+        testLet(1);
+        //console.log(z);
+       // console.log(y); //undefined
+        
+        console.log("-------------------\n");
+        //Arrow functions
+
+        //ES5 form of statement
+        var multiply = function(x,y) {
+            return x*y;
+        }
+        console.time('ES5');
+        console.log(multiply(2,3));
+        console.timeEnd("ES5")
+
+        //ES6: Same func as arrow func:
+        let multiply1 = (x,y)=>{return x*y};
+        console.time('ES6');
+        console.log(multiply1(2,3));
+        console.timeEnd("ES6")
+    </script>
+</body>
+</html>
