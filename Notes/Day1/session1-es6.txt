@@ -1,0 +1,101 @@
+5 important pointers of JS/ES :--> (JavaScript/ECMAScript):-> 
+
+1. The Official of JavaScript is ECMAScript !
+
+2. There are two type of Object used in JS/ES development ! 
+
+     2.1  Implicit Object :--- > colsole / err/ navigator/ windows / document etc
+     2.2  Explicit Object :-->   var d=new Date()
+
+3. There are Three type of javascript used in project UI/UX:--> 
+
+      UI ?   UX ?:--->  There are few paprameters based on UX :--> 
+
+
+                         1. PWA :-- Prograssive WEb APP 
+                         2. Responsiveness 
+                         3. performance 
+                         4. Look & feel 
+                         5. Accessibility 
+
+
+     3.1 :-->   Inline JAvascript :---->     <button onClick="hello()">    </button>
+     3.2 :-->   Internal Javascript :--->    <script>  POC    </script>
+     3.3 :--->  External JavaScript :---> <script src="ref.js">    </script>
+
+
+4. There are various kind of javascript version used in development :--> 
+
+        ES 1.1 1.2   1.3 1.4 1.5 1.6 ........1.7 1.8 
+
+                1.5 :-- ES5 
+                1.6 :-- ES6  :-- focus
+
+5. Now a days , we are using mordern javascript / ECAMScript development tools :--> 
+
+                5.1 :-- TypeScript  :--- Microsoft :----- Angular / React
+                5.2 :-- Babel :-----> Open source  :---> React/ Vue development
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+                 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  Angular ---> ES6 + TS  + Angular new features
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+   Angular :--- 1.1     1.2 Angular 2..............................................1.14 :-- Angular 14
+           <--- ES5--> <-----------------------------ES6-------------------------------------->
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ 
+ES 6 --- >   Basic ES6  + Advaced ES 6 
+
+
+    Basic ES6 :--> 
+
+   1. Class's & Object / Constructor 
+   2. properties / Methods 
+
+     There are three type of methods used in ES 6 Development 
+
+       2.1 :---- public methods /propertis :--- this keyword 
+       2.2 :---> private methods & properties :---  _ :---- # 
+       2.3 :---> previledged methods /properties :-- no keyword.
+
+
+   3. prototype 
+   4. static
+   5. Abstraction 
+   6. Encapsulation 
+   7. Inheritance 
+   8. Namespace 
+
+  Advanced ES 6 :--> 
+  
+   1. Let vs var/ Const
+   2. Arrow Functions
+   3. Spread Operator :-- ...
+   4. Destructuring 
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+   
+
+
+
+
+
+
+
+
+     
+
+
+
+   
+                               
+
+
