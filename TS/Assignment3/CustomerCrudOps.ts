@@ -49,8 +49,8 @@ function findCustByPhNum(phNum:string) {
     //let arr:string[] = ['a','b','c'];
     //let f = arr.filter(s => s == 'b');
     //console.log(f);
-    let foundCust = custArr.every(cust => {cust.phoneNumber == phNum});
-    console.log(foundCust);
+    let foundCust = custArr.filter((cust) => {return cust.phoneNumber === phNum});
+    foundCust.forEach(cust => console.log(cust));
 }
 
 createNewCustomers();

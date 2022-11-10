@@ -37,8 +37,8 @@ function findCustByPhNum(phNum) {
     //let arr:string[] = ['a','b','c'];
     //let f = arr.filter(s => s == 'b');
     //console.log(f);
-    var foundCust = custArr.every(function (cust) { cust.phoneNumber == phNum; });
-    console.log(foundCust);
+    var foundCust = custArr.filter(function (cust) { return cust.phoneNumber === phNum; });
+    foundCust.forEach(function (cust) { return console.log(cust); });
 }
 createNewCustomers();
 updateCustRecords(2, new Customer("some name 4", 40, "9880099934"));
