@@ -4,7 +4,7 @@ class Person {
     private greeting:string;
     protected refProtectedVal:string;//Can be accessed in any class within same file, not in other external files
     readonly readOnlyVar:number;
-
+ 
     constructor(personId:number, greeting:string, refProtectedVal:string) {
         console.log("Person is initialized");
         this.personId = personId;
