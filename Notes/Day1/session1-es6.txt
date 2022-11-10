@@ -12,11 +12,11 @@
       UI ?   UX ?:--->  There are few paprameters based on UX :--> 
 
 
-                         1. PWA :-- Prograssive WEb APP 
-                         2. Responsiveness 
-                         3. performance 
-                         4. Look & feel 
-                         5. Accessibility 
+                         1. PWA :-- Progressive WEb APP
+                         2. Responsiveness: detect form factor & render according to screen size. Angular, react etc have in-built listeners to detect size & render accordingly. 
+                         3. performance: load time, order of asset & data fetch after rendered(lazy load), less http calls, less dom manip, smooth ui & animations, asynch operations etc
+                         4. Look & feel: color, font, shape, layout etc which gibes uniform/consistent look, ease to use & help in branding
+                         5. Accessibility: ppl with/wo disability shd be easily able to navigate & interact with pages. W3c has set stds for this. Ex: use of ARIA (Accessible Rich Internet Applications)- use h1 instead of header on div etc. 
 
 
      3.1 :-->   Inline JAvascript :---->     <button onClick="hello()">    </button>
