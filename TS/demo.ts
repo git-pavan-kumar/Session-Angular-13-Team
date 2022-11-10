@@ -9,7 +9,7 @@ console.log("type of name --> ", typeof(nameStr));
 let num:number = 20;
 console.log("num --> ", num);
 console.log("type of num --> ", typeof(num));
-
+ 
 //any type
 let anyVar:any = 11;
 console.log("anyVar --> ", anyVar);
