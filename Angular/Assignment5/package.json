@@ -1,5 +1,5 @@
 {
-  "name": "angular-demo-project",
+  "name": "assignment5",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -21,7 +21,7 @@
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4",
-    "bootstrap": "^5.2.2"
+    "bootstrap": "~5.2.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.3.0",

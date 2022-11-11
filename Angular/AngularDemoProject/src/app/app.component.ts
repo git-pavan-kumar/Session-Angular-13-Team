@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AngularDemoProject';
+  title:string = 'THBS';
+  name:string = "Welcome to A13 Application";
+
+  clickMessage:string = "Status of training";
+
+  onClickHandler = (num:number) => {
+    console.log("Event fired in A13", num);
+    this.clickMessage = "Training is up -->";
+  };
 }

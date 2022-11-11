@@ -1,0 +1,26 @@
+<form ngForm>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name"
+             [(ngModel)]="model.custName" name="name" required="true">
+    </div>
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input type="number"  class="form-control" id="age"
+             [(ngModel)]="model.age" name="age" required="true">
+    </div>    
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="number"  class="form-control" id="phNum"
+               [(ngModel)]="model.phoneNumber" name="phoneNumber" required="true">
+      </div> 
+      <button type="submit" class="btn btn-primary" (click)="createNewCustomers()">Submit</button>
+</form>
+
+<div>
+    <ol>
+        <li *ngFor="let cust of custArr">
+            {{cust.custName}}<b>||||</b>{{cust.age}}<b>||||</b>{{cust.phoneNumber}}
+        </li>
+    </ol>
+</div>
