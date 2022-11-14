@@ -8,7 +8,7 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class MyService {
   headers = new HttpHeaders().set('Content-Type', 'application/json').set('Access-Control-Allow-Origin','*');
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient:HttpClient) {}
 
   getUsers(): Observable<any>{
     let getUsersUrl:string = "http://localhost:7000/users/list";
