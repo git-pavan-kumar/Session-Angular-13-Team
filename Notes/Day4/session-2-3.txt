@@ -1,0 +1,63 @@
+Remainig Topic for TS :==> 
+
+1. Various modifires @Class Level :--> 
+   
+     Private    :-- # 
+     public :---- This
+     protected :----- no modifire
+     readonly  :-->  const
+
+2. JSX :--discuss this later 
+
+3. enum 
+
+4 Angular 13 Setup 
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Assignment 4 :--> 
+
+  In Reference of Assignment 2 :-- Sci Cal :-- Transform the compelete code of ES6 in TS Cal using all modifire 
+  of Typescript :--> 
+ 
+    public/private/preveledged/protected etc. 
+
+
+Time :-- 45 Min.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+  Angular :--- ES6  + TS +  New Features ! 
+
+
+ Node :--- 14.15.x  :---- npm 6x -- 8x -- Angular CLI 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Angular CLI  :=-- same as MAVEN / Gradel :-- which is using to get manage the complete life cycle of Angular
+project ! 
+
+
+Some comands for Angular setup :-> 
+
+ 1. npm i -g npm :-- this will upgrade the version of npm 
+ 2. npm i -g @angular/cli@13.3.0    :-- it will install the angular CLI version 
+ 3. npm clean cache --force :-- this command clean the cache of node
+ 4. ng --version :=----  show the verison of angular CLI 
+ 5. ng new nameofProject :== its create the [project of Angular !
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+
+
+
+
+
+
+  11.25 a.m will ramp up the session !

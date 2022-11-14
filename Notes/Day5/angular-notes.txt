@@ -1,0 +1,137 @@
+Aangular folder structure Description :--> 
+
+
+  Note :--- Angular are using some Decorator (Annotation) for Development 
+
+   1. @component :--> component 
+   2. @ngModule :-->  it represent the module (This module contains 4 sections :-- declaration / imports/providers/bootstrap)
+   3. @pipe :--- filter 
+   4. @directive :--- directive in Angular 
+   5. @injectable :---> it Represent the ANgular service development
+   6. @input/@output :-- this is representing the data sharing between the component!
+
+
+
+
+1.node_module:-- this folder contains the all dependencies of A13 project based
+  on package.json. 
+
+2.Src :-->  
+
+     2.1 :- app :--> this folder contains the default app component with 
+      for important file :-> 
+
+       1. app.component.ts :-- component Source file 
+       2. app.componnet.html :-- template file 
+       3. app.component.css :-- this is css component file for look & feel 
+       4. app.component.spec.ts :-- testing file for Unit testing 
+       5. app.module.ts :-- this file is very important in which we register
+           all the Angular component/ directive/pipe/ service etc.
+       6. app.routing.module.ts :-- this file is responsible for routing & 
+           navigation rule in the project (SPA) single page application ! 
+
+3. assests :-- In this folder , we can put bmp/jpg/.mov/.mp3 etc based on 
+   the website ! 
+4. environment :--in this folder , we can set the env for Development/ production
+ testing 
+
+5. index.html :-> This is the entry point of the application
+
+
+        HTML :-->  We used pre deffined tag :--> <a> <p> <li> <ul> :--> 
+
+       all HTML tag :--> JSX :-- Javascript XML
+        class person {} :--> over the html :-->   <person> </person> 
+
+6. main.js :- this is also a very impt file which is responsible to bootstrap 
+the angular module ! 
+
+7. pollyfills :-- this is the important file which is using to resolve the browser imcompatabilities issues 
+
+8.style.css ":-->   we need to register the global css which provide the look & feel of the Application 
+
+9. angular.json :-- its very impotant file which contains all the con]figuration of the project / entry point 
+    ng configuration etc. 
+
+
+
+10 :-- karma config.js :-- this file contains the jamisne / karma (Test runner ) configration based on 
+       TDD env. 
+
+11 :package.json :--> this file contains  the dependencies of the project ! 
+
+12 tsconfig.json :-- this file contains all the Type script trget runtym / compiler option for tranformation 
+  of the ts code in js 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Angular pointer :-->
+
+ 1. Angular Suppport the MVC :-- M :-- model   C:-- Controller   V:-- View   
+
+ 2. In Angular development :-- we used two type of binding :--> 
+
+    1. one way binding :---> {{}}  :--- > Angular Expression 
+    2. Two Way Binding :-->   ngModel Directive 
+
+ 3.  We use various decorator in Angular Development :-> 
+
+    @Component :--- component in Angular 
+    @Pipe :-- its represent a pipe which would be the filter in Angular 
+    @Directive :-- its represent the directive in Angular 
+    @Injectable :--> it represnt the service in Angular 
+    @input/ @Output :-- its represent the  data sharing between the component ! 
+ 
+
+3. We can create the all component in Angular using this command :->  ng g component nameofCOmponent 
+
+4. We can developm the SPA Application (Single page application) in Angular using routing module. 
+
+5. Generraly we develop the MFC component in Angular :-- Multi file Component :--> 
+
+                     In Angular when we create any component its always craete 4 file :--> 
+
+                                         app.ts
+                                         app.html 
+                                         app.spec.ts
+                                         app.css 
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+       
+
+  
+
+
+  

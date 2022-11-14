@@ -1,0 +1,66 @@
+Todays Agenda :--> 
+
+1. Angular pipe 
+
+    1.1 In Angular there are two type of pipe :--(Filter / Model Object)
+
+           1. Internal pipe  (Date/ Uppecase/ Lower case / Currency etc.)
+           2. External pipe  (Custom Pipe)  
+
+   1.2 Pipe are representing by the ! symbol 
+   1.3 we will create the custom pipe using the command ng g pipe pipename
+   1.4 pipe always be created uisng @pipe Decorator which implemented the 
+      pipetransform interface with transform in which we will ovveride our 
+      custom logic ! 
+
+   1.5 we will refer all the pipeover the angular component Template 
+
+   Demo 1 :-- internal pipe :
+   Demo 2 :--- External Pipe :
+
+
+
+2. Angular Directive (Custome Directive) :-- tommarow
+3. Angular Service (@injectable). 
+
+
+       MVC :--- >   Service -----> component------> Model ---------> View 
+
+ 
+    1. We can create the Angular Service  using the command :-- > ng g service servicename 
+    2. Service in angular are representing by the @injectable Decorator 
+    3. In Angular service there are various http method which is responsible to get consume the data 
+       from back end :--> like 
+
+
+                     http.get() :-->  fetch the result from the microservice 
+                     http.post():-->  create the data :-- in microservice 
+                     http.delete():--- delete the data from the microservice 
+                     http.put():---- update the dat from backend 
+
+    4. When we are creating the angular service , we just use the the httpmodule , which need to configure 
+       in app.module.ts file 
+
+    5. For MOck API we need require the API services 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+    
+4. JSON-Server-API :-->dummy/mock microservices 
+
+Assignment :-- for Today'
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+  Assignment 6:-- In The existing JSON server User Data ! perfom rest of the operation :-->  
+
+     getUsers() :-- done 
+     createUser():--- 
+     updateUser()
+     DeleteUser():-->
+
+ Note :-- craete Separat UserCompoent in Angular & perform All Respective Operation 
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
