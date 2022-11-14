@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
+import { TestPipePipe } from './test-pipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerDetailsComponent
+    CustomerDetailsComponent,
+    TestPipePipe
   ],
   imports: [
     BrowserModule,
