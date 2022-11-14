@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
 import { Customer } from '../customer';
+import { MyService } from '../shared/my.service';
 
 @Component({
   selector: 'app-my-component',
@@ -12,7 +14,9 @@ export class MyComponentComponent implements OnInit {
 
   public model:Customer = new Customer('', 0, '');
 
-  constructor() { }
+  public getData:any[] = new Array();
+
+  constructor(private _httpService:MyService) { }
 
   ngOnInit(): void {
   }
@@ -24,4 +28,11 @@ export class MyComponentComponent implements OnInit {
     console.log("----------Created new customers----------");
     console.log(JSON.stringify(this.custArr));
   };
+
+  getUserDetails(){
+    this._httpService.getUsers().subscribe((res : any[])=>{
+             console.log(res);
+       this.getData = res;
+     });
+  }
 }

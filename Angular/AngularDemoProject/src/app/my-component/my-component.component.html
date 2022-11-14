@@ -24,3 +24,12 @@
         </li>
     </ol>
 </div>
+
+<button type="submit" (click)="getUserDetails()">New Submit</button>
+<div>
+    <ol>
+        <li *ngFor="let cust of getData">
+            {{cust.first_name}}<b>||||</b>{{cust.last_name}}<b>||||</b>{{cust.email}}
+        </li>
+    </ol>
+</div>
