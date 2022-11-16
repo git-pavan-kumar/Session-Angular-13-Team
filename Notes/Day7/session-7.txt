@@ -1,0 +1,72 @@
+Todays Agenda :--> 
+
+1. Directive in Angular 
+
+   There are two type of directive used in Angular Development :--> 
+
+      1.1 Internal Directive :--> ngModel / ngif/*ngFor etc .
+      1.2 External Directive :-- > The EXternal directive can create using the command :-- ng g directive directiveName :--> 
+
+                   Note :- The External Directive will represent using the @Directive Decorator 
+                           All Directive are refer in Angular as Attribute in Component Template 
+
+
+ Note :--   In Angular everuything is component like :-- Componnent :---  <> Emelemt Selector 
+                                                         pipe :--> its refer for Model maniuplutation over the model 
+                                                         Directive >--- []  attaribute Selector 
+
+
+                  Type of Selector in HTML :--- id :--- #
+                                                class :-- . 
+                                                element :-- <>
+                                                Attribute :- []
+
+ Scenerio :-- I want develop the Directive which will change the color of backgroud of any element 
+
+              Demo 1:-- Static Direactive 
+              Demo 2::-- Dynamic Directive
+                         
+
+     15 min break :--- 1 will ramp up the session 
+  
+
+2. SPA vs MPA in Angular APP 
+3. SPA implementation in Angular using Routing 
+  
+    Demo 1 :-- basic Routing  :-- today 
+    Demo 2 :-- Complex Routing 
+
+
+    1. We can achive the SPA Single page Application Developemnt using the Routing feature ! 
+     2.The All Routing Implemenattion is the part of @angular/Router 
+    3. We need to define all the Route rules in app.Routing.module.ts file 
+     4.After defining the Route rule configure all the Roue navigation in HTML page
+     5. Render all the Route component using the <Router-outlet> tag in angular 
+
+
+      Home   Cutomer Details    Contact Us 
+
+
+
+
+
+
+4. Assignment :-- 8 
+
+   In Existing Application ! craete the Navigation like below 
+
+  
+   Home   NoramlCustomer   PremiumCustomer  Contact Us
+
+  Click : Normal Cuatomer :-- its render the Customer Array Component
+  Click :-- Premium Customer :-- its render the httpCustomer Component 
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
