@@ -38,6 +38,10 @@
 }
 #customerList {
     height: 275px;
+    margin-bottom: 300px;
+}
+#table {
+    height: 200px;
 }
 #rightContainer {
     background-color: aliceblue;

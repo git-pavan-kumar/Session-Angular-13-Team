@@ -1,0 +1,26 @@
+<form ngForm>
+    <div class="form-group">
+      <label for="fname">First Name</label>
+      <input type="text" class="form-control" id="fname"
+             [(ngModel)]="model.firstName" name="fname" required="true">
+    </div>
+    <div class="form-group">
+      <label for="lname">Last Name</label>
+      <input type="text" class="form-control" id="lname"
+             [(ngModel)]="model.lastName" name="lname" required="true">
+    </div>    
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text"  class="form-control" id="email"
+               [(ngModel)]="model.email" name="email" required="true">
+      </div> 
+      <button type="submit" class="btn btn-primary" (click)="createNewCustomers()">Submit</button>
+</form>
+
+<div>
+    <ol>
+        <li *ngFor="let cust of custArr">
+            {{cust.first_name}}<b>||||</b>{{cust.last_name}}<b>||||</b>{{cust.email}}
+        </li>
+    </ol>
+</div>
