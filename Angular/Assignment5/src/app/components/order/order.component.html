@@ -1,0 +1,42 @@
+<app-nav></app-nav>
+<div class="container-fluid">
+    <div class="row" id="midSection">
+        <div class="col-2" id="leftContainer"></div>
+        <div class="col-8" id="centerContainer">
+            <div class="container" id="customerForm">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-7"></div>
+                            <div class="col-5" id="subNav">
+                                <div id="contnt" class="nav justify-content-center">
+                                    <span id="spanCls1">
+                                        <a [routerLink]="['child-one-normal']">Normal Order  </a>
+                                    </span>
+                                    <span id="spanCls2">
+                                        <a [routerLink]="['child-two-premium']">Premium Order</a>  
+                                    </span>
+                                </div>
+                                
+                            </div>
+                            <div class="col-3"></div>
+                        </div>
+                        <div class="row">
+                            <div style="color: red; margin-top: 1rem;">
+                                Component Two's router outlet:
+                            </div>
+                            <div style="border: 2px solid red; padding: 1rem;">
+                                <router-outlet></router-outlet>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2" id="rightContainer"></div>
+    </div>
+</div>
+
+

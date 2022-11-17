@@ -10,6 +10,12 @@ import { CustomerDetailsComponent } from './components/customer-details/customer
 import { HighlightDirective } from './directives/highlight.directive';
 import { HomeComponent } from './components/home/home.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { OrderComponent } from './components/order/order.component';
+import { NormalOrderComponent } from './components/normal-order/normal-order.component';
+import { PremiumOrderComponent } from './components/premium-order/premium-order.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { LoginComponent } from './components/login/login.component';
+import { NavModule } from './shared/nav/nav.module';
 
 @NgModule({
   declarations: [
@@ -19,15 +25,22 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     HttpCustomerDetailsComponent,
     HighlightDirective,
     HomeComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    OrderComponent,
+    NormalOrderComponent,
+    PremiumOrderComponent,
+    PageNotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NavModule
   ],
   providers: [],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

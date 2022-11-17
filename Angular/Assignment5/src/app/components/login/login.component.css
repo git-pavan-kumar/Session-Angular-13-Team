@@ -2,6 +2,9 @@
 #container {
     margin-top: 100px;
 }
+#loginForm {
+    padding-top: 50px;
+}
 #header {
     height: 50px;
 }
@@ -23,7 +26,7 @@
 }
 
 #midSection {
-    height: 595px;
+    height: 395px;
 }
 #leftContainer {
     background-color:aliceblue;
@@ -54,8 +57,4 @@
     color: crimson;
     font-style: italic;
     text-align: center;
-}
-h2 {
-    padding-left: 110px;
-    padding-top: 100px;
 }

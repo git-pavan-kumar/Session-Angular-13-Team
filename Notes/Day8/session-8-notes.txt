@@ -1,0 +1,19 @@
+1. Complex routing with sub-menus & sub-children
+2. Handling page not found issues
+3. Lazy loading(integrate with charts lib) mechanism with routing
+4. Assignment
+
+
+
+
+ng g c order
+ng g c normalOrder
+ng g c premiumOrder
+
+
+ng g c pageNotFound
+{path: '**', component: PageNotFoundComponent}
+
+Assignment: Create a login page with LoginComponent. After entering the credentials & authentication, angular app should allow to land on the dashboard. 
+Otherwise, it should not allow with error message on the same login page.
+Note: Authentication has to be checked from json-server with users.json file & routes.json file. Run 2 instances- one with 7000 & another with 7001 port.

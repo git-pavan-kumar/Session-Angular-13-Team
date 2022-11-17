@@ -1,0 +1,33 @@
+<div class="container-fluid" id="loginContainer">
+    <div class="row" id="midSection">
+        <div class="col-2" id="leftContainer"></div>
+        <div class="col-8" id="centerContainer">
+            <div class="container" id="customerForm">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div *ngIf="isInvalid" id="error">Invalid credentials!</div>
+                        <form ngForm id="loginForm">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username"
+                                    [(ngModel)]="model.username" name="username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password"
+                                    [(ngModel)]="model.password" name="password" required="true">
+                            </div> 
+                            <div class="d-grid gap-2">
+                                <button type="submit" id="submitBtn" class="btn btn-primary" (click)="login()">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2" id="rightContainer"></div>
+    </div>
+</div>
+<router-outlet></router-outlet>

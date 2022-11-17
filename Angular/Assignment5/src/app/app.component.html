@@ -303,7 +303,7 @@
   </style>
   
   <!-- Toolbar -->
-  <div class="toolbar" role="banner">
+  <div class="toolbar container-fluid" role="banner">
     <img
       width="40"
       alt="Angular Logo"
@@ -324,12 +324,12 @@
           <path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/>
         </svg>
       </a>
-      
   </div>
-  
+  <div style="padding-top: 60px;">
+    <router-outlet></router-outlet>
+  </div>
   <!-- <div class="content container-fluid" role="main"> -->
-    <div id="contnt" style="margin-top:60px;">
-      <!-- <app-customer-details></app-customer-details> -->
+ <!--   <div id="contnt" style="margin-top:60px;">
       <ul class="nav justify-content-center">
         <li class="nav-item">
           <a class="nav-link active" [routerLink]="['/home']">Home</a>
@@ -341,22 +341,14 @@
           <a class="nav-link" [routerLink]="['/httpCustomers']">Premium Customers</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/orders']">Orders</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/analysis']">Analytics</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" [routerLink]="['/contactUs']">Contact Us</a>
         </li>
       </ul>
     </div>
-  
-    <!-- Resources -->
-    
-  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-  <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-  <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-  <!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-  <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-  
-  <router-outlet></router-outlet>
- 
-  
-  
+    -->
