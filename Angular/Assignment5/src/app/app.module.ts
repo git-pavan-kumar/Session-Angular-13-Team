@@ -16,6 +16,7 @@ import { PremiumOrderComponent } from './components/premium-order/premium-order.
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavModule } from './shared/nav/nav.module';
+import { LogoutComponent } from './components/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NavModule } from './shared/nav/nav.module';
     NormalOrderComponent,
     PremiumOrderComponent,
     PageNotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

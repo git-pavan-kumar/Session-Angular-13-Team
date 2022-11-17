@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginRequest } from 'src/app/models/login-request';
 import { LoginResponse } from 'src/app/models/login-response';
+import { AuthService } from 'src/app/services/auth.service';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
@@ -18,7 +19,8 @@ export class LoginComponent implements OnInit {
   private router:Router;
 
   constructor(private _httpService:LoginService,
-              private r:Router) {
+              private r:Router,
+              private authService:AuthService) {
                 this.router = r;
                }
 
@@ -31,12 +33,14 @@ export class LoginComponent implements OnInit {
         this.isInvalid = true;
       } else {
         this.isInvalid = false;
-        console.log("pwd from api ", this.model.password);
         let p:string = this.model.password;
         this._httpService.login(this.model.username).subscribe((res:LoginResponse[]) => {
           console.log("pwd from api ", res);
           if(res.length > 0 && res[0].password != undefined && res[0].password == p) {
-            this.isLoggedIn = false;
+            this.isInvalid = false;
+            this.authService.setAuth(true);
+            this.authService.setRole(res[0].role);
+            console.log("isInvalid ", !this.isInvalid);
             this.router.navigate(['/home']);
           } else {
             this.isInvalid = true;

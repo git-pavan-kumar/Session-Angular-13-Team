@@ -1,0 +1,56 @@
+1. External library integration with angular like:	
+		a. Material
+		b. Prime Ng
+		c. Bootstrap
+		Note: Can combine Prime Ng & Bootstrap together, 
+				If we use Material, we DON'T have to use Bootstrap
+		Note: PrimeNg lib has strength to use the analytical components like: Charts & extensions
+		
+
+Steps for PrimeNg Pie chart:
+	1. Install dependencies:		
+		npm install --save  primeng@13.4.1
+		npm install --save primeicons@6.0.1
+		npm install --save chart.js@3.3.2
+
+	2. In styles.css:
+		@import "~primeicons/primeicons.css";
+		@import "~primeng/resources/themes/lara-light-blue/theme.css";
+		@import "~primeng/resources/primeng.min.css";
+		
+	3. In analytics-module.module.ts:
+		import { ChartModule } from 'primeng/chart';
+		Inject ChartModule in the "imports" section
+
+	4. In chart-component.component.ts:
+	import { Component, OnInit } from '@angular/core';
+	import { PrimeNGConfig } from 'primeng/api';
+	---------
+	  data: any;
+	  constructor(private primengConfig: PrimeNGConfig) {
+		  this.data = {
+			  labels: ['A','B','C'],
+			  datasets: [
+				  {
+					  data: [300, 50, 100], //Lookup this data from service--> get data from backend
+					  backgroundColor: [
+						  "#FF6384",
+						  "#36A2EB",
+						  "#FFCE56"
+					  ],
+					  hoverBackgroundColor: [
+						  "#FF6384",
+						  "#36A2EB",
+						  "#FFCE56"
+					  ]
+				  }]    
+			  };
+	  }
+	  ngOnInit(): void {
+		this.primengConfig.ripple = true;
+	  }
+	  
+	5. In chart-component.component.html:
+		<div style="text-align: center;">
+			<p-chart type="pie" [data]="data"></p-chart>
+		</div>
