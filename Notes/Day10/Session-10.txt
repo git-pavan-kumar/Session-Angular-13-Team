@@ -1,0 +1,64 @@
+1. 2 types of forms in angular:-- Template driven forms, Reactive forms
+	1.1 Template driven is always used with ngForm directive in the development
+	1.2 In reactive form, we always use the in-built class FormControl, FormBuilder etc. which is used to develop the complex form with custom validation implementation
+	1.3 In template driven forms, we have multiple forms in a single template, in which we can perform variopus actions in single templates
+	1.4 Template driven forms uses FormsModule & reactive forms uses ReactiveFormsModule in development
+	
+	
+2. Testing environment in angular:
+	2.1 Angular uses Jasmine & Karma to build TDD environment & execute the test cases
+	2.2 Jasime is a core testing engine in which we write the test cases which contains 4 important key functions:
+		2.2.1 Describe: This is the test suite containing 2 parameters: 1. name of test suite, 2. callback
+		2.2.2 It: This is a test case function in which we write the logic of the test case, contains 2 params: 1. name of test case, 2. callback
+		2.2.3 Expect: This is a function which uses to identify the actual & expected results based on the test case
+		2.2.4 (matchers): toBe(), toEqual() etc.. These functions are matchers which are used in expect functions to identify actual & expected results
+	2.3 Jasmine is the core engine in which we write many test cases in angular & execute it by the test-runner Karma
+	2.4 In angular,the TDD env is configured in the project struture which contains config files like: karma.config.js, angular.json
+	2.5 We can execute the test cases using command: ng test or npm test
+	
+3. Basic jasmine demo for test case:
+
+4. Angular environment demo for executing test case
+
+-------------------------------------------------------------------------------------
+Jasmine basic testing steps:
+1. Download the stand alone jasmine lib from jasmine website & extract into a folder in your system
+
+2. Create a source file in "src" folder - (helloWorld.js) :
+	var helloworld = function() {   
+		return 'Hello World'; 
+	};
+
+3. Create a test spec file in "spec" folder- (helloWorldSpec.js):
+		describe("Hello World", function() { 
+		   it("should Return Hello world",function() { 
+			  expect(helloworld()).toEqual('Hello World'); 
+		   });
+			
+		  it("should Return false",function() { 
+			  expect(helloworld()).toEqual('Hello'); 
+		   });
+		});
+		
+4. Edit the "SpecRunner.html" file & add the below script tags:
+	<script src="src/helloWorld.js"></script>
+	<script src="spec/helloWorldSpec.js"></script>
+	
+5. Run the SpecRunner.html file in the browser to see the test cases results
+--------------------------------------------------------------------------------------
+
+Running test cases in Angular project - with Jasmine & Karma:
+The config files can be found at karma.conf.json & angular.json
+Write the unit test cases in *.spec.ts file
+	Angular cli will create the spec files automatically along with the source components/service/class etc..
+	The test case is setup already with TestBed config
+	Add more test cases as required
+To execute test cases:
+	Goto root of the angular project & execute "ng test"
+	This will execute the all the jasmine test cases & show it up in browser
+To generate the html test reports:
+	Goto root of the angular project & execute "ng test --no-watch --code-coverage"
+	This will execute the all the jasmine test cases in the browser
+	In the root of the project, a folder "coverage" will be created --> open index.html in browser to check the test reports (all coverage %)
+	
+--------------------------------------------------------------------------------------

@@ -3,6 +3,9 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 import { AppComponent } from './app.component';
 import { TestPipePipe } from './filters/test-pipe.pipe';
 import { HttpCustomerDetailsComponent } from './components/http-customer-details/http-customer-details.component';
@@ -17,6 +20,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { LoginComponent } from './components/login/login.component';
 import { NavModule } from './shared/nav/nav.module';
 import { LogoutComponent } from './components/logout/logout.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -32,14 +36,16 @@ import { LogoutComponent } from './components/logout/logout.component';
     PremiumOrderComponent,
     PageNotFoundComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NavModule
+    NavModule,
+    ReactiveFormsModule
   ],
   providers: [],
   exports: [],
